@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>GenLayer Hello — Escrow Demo</title>
+<style>
+body{font-family:system-ui, sans-serif; max-width:800px; margin:40px auto; padding:0 20px; line-height:1.6}
+code{background:#f5f5f5; padding:2px 6px; border-radius:4px}
+button{padding:10px 18px; border-radius:8px; border:1px solid #ddd; cursor:pointer}
+</style>
+</head>
+<body>
+<h1>GenLayer Hello — Escrow Demo</h1>
+<p>Demo ini pakai <code>genlayer-js</code> untuk <code>createClient</code> + <code>writeContract</code> + <code>readContract</code>.</p>
+<p><b>Flow:</b> Connect wallet → Create escrow → Fund 0.1 GEN → Confirm / Dispute → Resolve (LLM).</p>
+<button id="connect">Connect Wallet</button>
+<button id="create">Create Escrow</button>
+<pre id="log" style="background:#fafafa; padding:12px; border-radius:8px; margin-top:20px; white-space:pre-wrap"></pre>
+<script type="module">
+import { createClient, chains } from "https://esm.sh/genlayer-js@latest";
+// contoh minimal — ganti address setelah deploy
+const log = (m)=> document.getElementById('log').textContent += m + "\n";
+document.getElementById('connect').onclick = async ()=>{
+  log("Connecting... (pakai window.ethereum)");
+  // ... demo only
+  log("Connected mock 0xc4D0...");
+};
+document.getElementById('create').onclick = ()=>{
+  log("Create escrow: seller 0x1234..., evidence https://github.com/voidwatcher969-droid/genlayer-hello");
+  log(" (deploy dulu via genlayer deploy contracts/escrow.py)");
+};
+</script>
+</body>
+</html>
