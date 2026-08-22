@@ -2,7 +2,8 @@
 """
 GenLayer Intelligent Escrow — demo untuk Builder Program
 
-Flow ini dibuat dengan komentar yang cukup detail. Logika intinya: escrow + dispute yang diselesaikan via pengecekan web + penilaian.
+Flow ini dibuat dengan komentar yang cukup detail.
+Logika intinya: escrow + dispute yang diselesaikan via pengecekan web + penilaian.
 
 Catatan: ini contoh edukasi, bukan untuk mainnet tanpa audit.
 """
